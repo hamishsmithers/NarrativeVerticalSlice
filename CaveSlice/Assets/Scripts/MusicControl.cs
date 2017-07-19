@@ -19,6 +19,7 @@ public class MusicControl : MonoBehaviour {
 	public float open;
 
 	public float growth;
+	public float expGrowth;
 	// Use this for initialization
 	void Start () {
 		audioSource = GetComponent<AudioSource> ();
@@ -35,5 +36,6 @@ public class MusicControl : MonoBehaviour {
 
 	void FixedUpdate(){
 		open += growth;
+		open += open * expGrowth;
 	}
 }

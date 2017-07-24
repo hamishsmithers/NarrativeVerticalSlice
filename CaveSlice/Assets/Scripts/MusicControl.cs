@@ -8,11 +8,11 @@ public class MusicControl : MonoBehaviour {
 	public AudioLowPassFilter audioFilter;
 	[Range(0f,1f)]
 	public float baseVolume;
-	[Range(0f,1f)]
+	[Range(-1f,1f)]
 	public float maxVolume;
 	[Range(0f,10000f)]
 	public float baseFilter;
-	[Range(0f,10000f)]
+	[Range(-10000f,10000f)]
 	public float maxFilter;
 
 	[Range(1f,100f)]
@@ -25,7 +25,7 @@ public class MusicControl : MonoBehaviour {
 		audioSource = GetComponent<AudioSource> ();
 		audioFilter = GetComponent<AudioLowPassFilter> ();
 
-		open = 0;
+		//open = 0;
 	}
 	
 	// Update is called once per frame

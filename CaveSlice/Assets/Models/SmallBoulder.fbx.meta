@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: c2cd3b469b9a536489b2e214d5e4b0d2
-timeCreated: 1500860377
+guid: 0205b62efb2634e42b13eb727abc0a7c
+timeCreated: 1500957105
 licenseType: Pro
 ModelImporter:
   serializedVersion: 19
@@ -9,7 +9,7 @@ ModelImporter:
     400000: //RootNode
     2300000: //RootNode
     3300000: //RootNode
-    4300000: Feather
+    4300000: pSphere1
   materials:
     importMaterials: 1
     materialName: 0
@@ -50,9 +50,9 @@ ModelImporter:
     secondaryUVPackMargin: 4
     useFileScale: 1
   tangentSpace:
-    normalSmoothAngle: 180
+    normalSmoothAngle: 60
     normalImportMode: 0
-    tangentImportMode: 0
+    tangentImportMode: 3
   importAnimation: 1
   copyAvatar: 0
   humanDescription:

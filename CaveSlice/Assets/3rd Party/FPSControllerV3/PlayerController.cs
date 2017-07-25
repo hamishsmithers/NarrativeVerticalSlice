@@ -176,7 +176,7 @@ public class PlayerController : MonoBehaviour {
          * confused and the player can jump really high
          * when in a corner between 2 walls for example.
          */
-        float rayLength = 1f;
+        float rayLength = 0.4f;
         RaycastHit hit;
         Ray ray = new Ray(transform.position, -transform.up);
  		Debug.DrawRay(ray.origin, ray.direction * rayLength);

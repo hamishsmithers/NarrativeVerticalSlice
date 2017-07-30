@@ -19,7 +19,7 @@ public class EndGameTrigger : MonoBehaviour {
 	void Update(){
 		if (Time.time - timer > timeToEnd && hasTriggered==true) {
 			Application.Quit();
-			UnityEditor.EditorApplication.isPlaying = false;
+			//UnityEditor.EditorApplication.isPlaying = false;
 		}
 	}
 

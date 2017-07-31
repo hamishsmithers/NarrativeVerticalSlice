@@ -16,8 +16,8 @@ public class PlayerController : MonoBehaviour {
 	public float minimumY = -30f;
 	public float maximumY = 45f;
 
-	private float sensitivityX = 5f;
-	private float sensitivityY = 5f;
+	public float sensitivityX = 5f;
+	public float sensitivityY = 5f;
 	private float rotationY = 0f;
 
 	//Body Movement

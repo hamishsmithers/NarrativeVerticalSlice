@@ -19,19 +19,18 @@ public class EndGameTrigger : MonoBehaviour {
 	public float timeToEnd;
 	private float timer;
 
-	void Update(){
+	void FixedUpdate(){
 		if (Time.time - timer > timeToEnd && hasTriggered==true) {
 			Application.Quit();
 			//UnityEditor.EditorApplication.isPlaying = false;
 		}
 
-//		if (hasTriggered == false) {
-//			if (playerHead.transform.rotation.x > 20) {
-//				playerHead.transform.Rotate (0.05f, 0, 0);
-//			} else if (playerHead.transform.rotation.x < -20) {
-//				playerHead.transform.Rotate (-0.05f, 0, 0);
-//			}
-//		}
+		if (hasTriggered == true) {
+			if (playerHead.transform.eulerAngles.x != 0) {
+				//playerHead.transform.Rotate (-0.05f, 0, 0);
+				playerHead.transform.localRotation = Quaternion.Slerp (playerHead.transform.localRotation, Quaternion.identity, 0.008f); 
+			}
+		}
 
 	}
 
@@ -49,7 +48,6 @@ public class EndGameTrigger : MonoBehaviour {
 			wind.GetComponent<AudioSource> ().Play ();
 			wind.GetComponent<Animator> ().SetTrigger ("EndStart");
 			cave.GetComponent<Animator> ().SetTrigger ("EndStart");
-			playerHead.GetComponent<Animator> ().SetTrigger ("EndStart");
 
 			backgroundMusic.GetComponent<MusicControl> ().growth = -backgroundMusic.GetComponent<MusicControl> ().growth;
 			backgroundMusic.GetComponent<MusicControl> ().expGrowth = -backgroundMusic.GetComponent<MusicControl> ().expGrowth;
